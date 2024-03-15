@@ -20,20 +20,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     promise
-      .then(delay => {
-        iziToast.success({
-          title: 'Success',
-          message: `✅ Fulfilled promise in ${delay}ms`,
-          position: 'topCenter',
-        });
-      })
-      .catch(delay => {
-        iziToast.error({
-          title: 'Error',
-          message: `❌ Rejected promise in ${delay}ms`,
-          position: 'topCenter',
-        });
+    .then(delay => {
+      iziToast.success({
+        title: 'Success',
+        message: `✅ Fulfilled promise in ${delay}ms`,
+        position: 'topCenter',
       });
+    })
+    .catch(delay => {
+      iziToast.error({
+        title: 'Error',
+        message: `❌ Rejected promise in ${delay}ms`,
+        position: 'topCenter',
+      });
+    });
+
     form.reset();
   });
 });
